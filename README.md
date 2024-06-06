@@ -1,14 +1,14 @@
 # Optimizacion y limpieza de base de datos
 Optimización de base de datos en Microsoft SQL Server Management Studio
 
-## **Esquema de Tablas**
+## Esquema de Tablas
 
 ### clientes:
 
--cliente_id (INT): Identificador único del cliente.
--nombre (NVARCHAR(100)): Nombre del cliente.
--correo (NVARCHAR(100)): Correo electrónico del cliente.
--telefono (NVARCHAR(20)): Número de teléfono del cliente.
+### cliente_id (INT): Identificador único del cliente.
+### nombre (NVARCHAR(100)): Nombre del cliente.
+### correo (NVARCHAR(100)): Correo electrónico del cliente.
+### telefono (NVARCHAR(20)): Número de teléfono del cliente.
 
 ### Productos:
 
@@ -19,19 +19,19 @@ Optimización de base de datos en Microsoft SQL Server Management Studio
 
 ### Ventas:
 
--venta_id (INT): Identificador único de la venta.
--cliente_id (INT): Clave foránea que referencia al cliente.
--producto_id (INT): Clave foránea que referencia al producto.
--fecha_venta (DATE): Fecha de la venta.
--cantidad (INT): Cantidad de productos vendidos.
--total (DECIMAL(10, 2)): Total de la venta.
+### venta_id (INT): Identificador único de la venta.
+### cliente_id (INT): Clave foránea que referencia al cliente.
+### producto_id (INT): Clave foránea que referencia al producto.
+### fecha_venta (DATE): Fecha de la venta.
+### cantidad (INT): Cantidad de productos vendidos.
+### total (DECIMAL(10, 2)): Total de la venta.
 
-**Lógica de Negocio**
+### Lógica de Negocio**
 
-Las ventas están asociadas a clientes y productos mediante claves foráneas en la tabla ventas.
-Cada venta registra la fecha de venta, la cantidad de productos vendidos y el total de la venta.
-Los clientes y productos tienen información básica como nombre, correo, categoría, etc.
-Las relaciones entre las tablas están diseñadas para mantener la integridad referencial y asegurar la consistencia de los datos.
+### Las ventas están asociadas a clientes y productos mediante claves foráneas en la tabla ventas.
+### Cada venta registra la fecha de venta, la cantida d de productos vendidos y el total de la venta.
+### Los clientes y productos tienen información básica como nombre, correo, categoría, etc.
+### Las relaciones entre las tablas están diseñadas para mantener la integridad referencial y asegurar la consistencia de los datos.
 
 **Procesos de Limpieza y Optimización**
 
