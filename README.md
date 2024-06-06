@@ -1,7 +1,7 @@
 # Optimizacion-y-limpieza-de-base-de-datos
 Optimización de base de datos en Microsoft SQL Server Management Studio
 
-Esquema de Tablas
+**Esquema de Tablas
 
 clientes:
 
@@ -28,14 +28,14 @@ fecha_venta (DATE): Fecha de la venta.
 cantidad (INT): Cantidad de productos vendidos.
 total (DECIMAL(10, 2)): Total de la venta.
 
-Lógica de Negocio
+**Lógica de Negocio
 
 Las ventas están asociadas a clientes y productos mediante claves foráneas en la tabla ventas.
 Cada venta registra la fecha de venta, la cantidad de productos vendidos y el total de la venta.
 Los clientes y productos tienen información básica como nombre, correo, categoría, etc.
 Las relaciones entre las tablas están diseñadas para mantener la integridad referencial y asegurar la consistencia de los datos.
 
-Procesos de Limpieza y Optimización
+**Procesos de Limpieza y Optimización
 
 Eliminación de duplicados en la tabla ventas:
 
