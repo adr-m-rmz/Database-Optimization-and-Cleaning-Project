@@ -3,30 +3,28 @@ Optimización de base de datos en Microsoft SQL Server Management Studio
 
 **Esquema de Tablas**
 
-clientes:
+-clientes:
 
-cliente_id (INT): Identificador único del cliente.
-nombre (NVARCHAR(100)): Nombre del cliente.
-correo (NVARCHAR(100)): Correo electrónico del cliente.
-telefono (NVARCHAR(20)): Número de teléfono del cliente.
-productos:
+-cliente_id (INT): Identificador único del cliente.
+-nombre (NVARCHAR(100)): Nombre del cliente.
+-correo (NVARCHAR(100)): Correo electrónico del cliente.
+-telefono (NVARCHAR(20)): Número de teléfono del cliente.
 
-Productos:
+-Productos:
 
-producto_id (INT): Identificador único del producto.
-nombre_producto (NVARCHAR(100)): Nombre del producto.
-categoria (NVARCHAR(50)): Categoría del producto.
-precio (DECIMAL(10, 2)): Precio del producto.
-ventas:
+-producto_id (INT): Identificador único del producto.
+-nombre_producto (NVARCHAR(100)): Nombre del producto.
+-categoria (NVARCHAR(50)): Categoría del producto.
+-precio (DECIMAL(10, 2)): Precio del producto.
 
 Ventas:
 
-venta_id (INT): Identificador único de la venta.
-cliente_id (INT): Clave foránea que referencia al cliente.
-producto_id (INT): Clave foránea que referencia al producto.
-fecha_venta (DATE): Fecha de la venta.
-cantidad (INT): Cantidad de productos vendidos.
-total (DECIMAL(10, 2)): Total de la venta.
+-venta_id (INT): Identificador único de la venta.
+-cliente_id (INT): Clave foránea que referencia al cliente.
+-producto_id (INT): Clave foránea que referencia al producto.
+-fecha_venta (DATE): Fecha de la venta.
+-cantidad (INT): Cantidad de productos vendidos.
+-total (DECIMAL(10, 2)): Total de la venta.
 
 **Lógica de Negocio**
 
