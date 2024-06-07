@@ -1,5 +1,5 @@
 # Database optimization and cleaning
-Database optmization and cleaning in Microsoft SQL Server Management Studio
+Database optimization and cleaning in Microsoft SQL Server Management Studio
 
 ### Data Schema
 
