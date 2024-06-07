@@ -1,51 +1,52 @@
-# Optimización y limpieza de base de datos
-Optimización de base de datos en Microsoft SQL Server Management Studio
+# Database optimization and cleaning
+Database optmization and cleaning in Microsoft SQL Server Management Studio
 
-### Esquema de Tablas
+### Data Schema
 
-clientes:
+clients:
 
-#### cliente_id (INT): Identificador único del cliente.
-#### nombre (NVARCHAR(100)): Nombre del cliente.
-#### correo (NVARCHAR(100)): Correo electrónico del cliente.
-#### telefono (NVARCHAR(20)): Número de teléfono del cliente.
+#### client_id (INT): Unique identifier of the client.
+#### client_name (NVARCHAR(100)): Name of the client.
+#### mail (NVARCHAR(100)): Email of the client.
+#### phone (NVARCHAR(20)): Phone number of the client.
 
-productos:
+products:
 
-#### producto_id (INT): Identificador único del producto.
-#### nombre_producto (NVARCHAR(100)): Nombre del producto.
-#### categoria (NVARCHAR(50)): Categoría del producto.
-#### precio (DECIMAL(10, 2)): Precio del producto.
+#### producto_id (INT): Unique identifier of the product.
+#### product_name (NVARCHAR(100)): Name of the product.
+#### category (NVARCHAR(50)): Category of the product.
+#### price (DECIMAL(10, 2)): Price of the product.
 
-ventas:
+sales:
 
-#### venta_id (INT): Identificador único de la venta.
-#### cliente_id (INT): Clave foránea que referencia al cliente.
-#### producto_id (INT): Clave foránea que referencia al producto.
-#### fecha_venta (DATE): Fecha de la venta.
-#### cantidad (INT): Cantidad de productos vendidos.
-#### total (DECIMAL(10, 2)): Total de la venta.
+#### sale_id (INT): Unique identifier of the sale.
+#### client_id (INT): Foreign key referencing the client.
+#### product_id (INT): Foreign key referencing the product.
+#### date_sale (DATE): Date of the sale.
+#### amount (INT): Quantity of products sold.
+#### total (DECIMAL(10, 2)): Total of the sale.
 
-### Lógica de Negocio
+### Business Logic
 
-Las ventas están asociadas a clientes y productos mediante claves foráneas en la tabla ventas.
+Sales are associated with customers and products through foreign keys in the sales table.
 
-Cada venta registra la fecha de venta, la cantidad de productos vendidos y el total de la venta.
+Each sale records the sale date, the quantity of products sold, and the total sale amount.
 
-Los clientes y productos tienen información básica como nombre, correo, categoría, etc.
+Customers and products have basic information such as name, email, category, etc.
 
-Las relaciones entre las tablas están diseñadas para mantener la integridad referencial y asegurar la consistencia de los datos.
+The relationships between the tables are designed to maintain referential integrity and ensure data consistency.
 
-### Procesos de Limpieza y Optimización
+### Cleaning and Optimization Processes
 
-#### Eliminación de duplicados en la tabla ventas:
+#### Removing duplicates in the sales table:
 
-Se utiliza una consulta SQL que busca duplicados en la tabla ventas basándose en varios criterios como cliente_id, producto_id, fecha_venta, etc.
+An SQL query is used to search for duplicates in the sales table based on various criteria such as customer_id, product_id, sale_date, etc.
 
-Se elimina automáticamente los duplicados utilizando la cláusula DELETE y una subconsulta para identificar los registros duplicados.
+Duplicates are automatically removed using the DELETE clause and a subquery to identify the duplicate records.
 
-#### Índices para mejorar el rendimiento:
+#### Index to improve performance:
 
-Se crea índice en la columna producto_id en la tabla ventas, para mejorar el rendimiento de las consultas.
+An index is created on the product_id column in the sales table to improve query performance.
 
-Se documenta la razón de la creación del índice.
+The reason for creating the index is documented.
+
