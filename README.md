@@ -50,3 +50,4 @@ An index is created on the product_id column in the sales table to improve query
 
 The reason for creating the index is documented.
 
+NOTE: The database, tables, and data are examples and do not represent an actual database.
